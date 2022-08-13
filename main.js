@@ -7,7 +7,7 @@ function calc(operator, a, b) {
     case "subtract":
       return a - b;
     default:
-      console.log("Ошибка");
+      console.log("Ошибка!");
   }
 }
 calc("add", 3, 2);
