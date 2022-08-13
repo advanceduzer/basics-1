@@ -17,4 +17,4 @@ function calc(operator, a, b){
 console.log(calc('add', 1, 2));
 console.log(calc('multi', 1, 2));
 console.log(calc('subtract', 1, 2));
-console.log(calc('unknown', 1, 2));
+console.log(calc('unknown operation', 1, 2));
