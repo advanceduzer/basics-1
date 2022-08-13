@@ -1,13 +1,16 @@
-function calc(operator, a, b) {
+function calcSwitch(operator, a, b) {
   switch (operator) {
-    case "add":
+    case 'add' :
       return a + b;
-    case "multi":
-      return a * b;
-    case "subtract":
-      return a - b;
+    case 'multi':
+      return a * b
+    case 'subtract':
+      return a - b
     default:
-      console.log("Ошибка");
+      console.log('Error')
   }
 }
-calc("add", 3, 2);
+
+console.log(calcSwitch('add', 1, 2))
+console.log(calcSwitch('multi', 1, 2))
+console.log(calcSwitch('subtract', 3, 2))
