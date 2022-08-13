@@ -1,13 +1,18 @@
+// calculator
 function calc(operator, a, b) {
   switch (operator) {
-    case "add":
+    case 'add':
       return a + b;
-    case "multi":
+    case 'multi':
       return a * b;
-    case "subtract":
+    case 'subtract':
       return a - b;
     default:
-      console.log("Ошибка");
+      return 'Введенная операция не существует';
   }
 }
-calc("add", 3, 2);
+
+console.log(calc('multi', 4, 6));
+console.log(calc('add', 3, 5));
+console.log(calc('subtract', 21, 16));
+console.log(calc('subtrac', 21, 16));
