@@ -27,6 +27,7 @@ function calc() {
             break;
         default:
             alert("Некорректный ввод!");
+            return false;
     }
 }
 while (true) {
