@@ -1,17 +1,15 @@
-let operator;
-let a;
-let b;
-function calc (operator, a, b) {
+
+function calc (operator, operandOne, operandTwo) {
     switch (operator){
-        case '-' :
-    return a - b;
-    case '+' :
-        return a + b;
-        case '*' :
-            return a * b;
+    case 'subtract' :
+      return Number(operandOne) - Number(operandTwo);
+    case 'add' :
+      return Number(operandOne) + Number(operandTwo);
+    case 'multi' :
+      return Number(operandOne) * Number(operandTwo);
     }
 }
 
-console.log(calc("-", 10, 4));
-console.log(calc("+", 4, 2));
-console.log(calc("*", 2, 3));
+console.log(calc("subtract", 10, 4));
+console.log(calc("add", 4, 2));
+console.log(calc("multi", 2, 3));
