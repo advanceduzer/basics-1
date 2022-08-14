@@ -1,25 +1,31 @@
 let a = prompt('введите первое число', '0');
 let b = prompt('введите второе число', '0');
-let operation = prompt('введите один из операторов: +, -, *', '+');
+let operation = prompt('введите один из операторов: add, multi, substract', 'add');
 
-function calc(operation, numbOne, numbTwo) {
+function validateValues(operation, numbOne, numbTwo) {
 	let checkOnSpaces = numbOne === ' ' || numbTwo === ' ';
 	let notNumber = numbOne === '' || isNaN(numbOne) || numbTwo === '' || isNaN(numbTwo);
-	let operationIsCorrect = operation === '+' || operation === '-' || operation === '*';
+	let operationIsCorrect = operation === 'add' || operation === 'multi' || operation === 'substract';
 
 	if (checkOnSpaces || notNumber) return 'чтоб программа корректно работало введите числа';
 	else if (!operationIsCorrect) return 'введите правельный оператор';
-	else {
+	else return 'валидация пройдена';
+}
+
+function calc(operation, numbOne, numbTwo) {
+	if (validateValues(operation, numbOne, numbTwo) === 'валидация пройдена') {
 		switch (operation) {
-			case '+':
-				return +numbOne + +numbTwo;
-			case '-':
-				return +numbOne - +numbTwo;
-			case '*':
-				return +numbOne * +numbTwo;
+			case 'add':
+				return Number(numbOne) + Number(numbTwo);
+			case 'substract':
+				return Number(numbOne) - Number(numbTwo);
+			case 'multi':
+				return Number(numbOne) * Number(numbTwo);
 			default:
 				return 'произошла ошыбка';
 		}
+	} else {
+		return validateValues(operation, numbOne, numbTwo);
 	}
 }
 
