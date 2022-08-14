@@ -13,6 +13,6 @@ function calc(){
         case 'substract':
             return firstOperand-secondOperand;
         default:
-            alert('Ошибка');
+            alert('Ошибка! Попробуйте еще раз!');
     }
 }
