@@ -165,3 +165,13 @@ label[for="tab3"]
 {
    left:200px;
 }
+
+.citylist ul li {
+    cursor: pointer;
+    float: left;
+    width: 90%;
+}
+#favorites a {
+    width: 10%;
+    float:left
+}
